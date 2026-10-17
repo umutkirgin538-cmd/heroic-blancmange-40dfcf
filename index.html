@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050b14">
+<link rel="icon" href="/logo.png">
+<title>VANILLASMP | Yetkili Başvuru</title>
+<style>
+:root{--blue:#00bfff;--bg:#050b14;--panel:#0a1523;--muted:#a9bdd0;--line:#1b3850}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#102c45 0,#050b14 58%);color:#edf7ff;font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif;min-height:100vh}
+.wrap{max-width:780px;margin:38px auto;padding:0 18px}.hero,.form{background:rgba(8,19,33,.97);border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 70px #0007}
+.hero{padding:30px;margin-bottom:18px}.brand{display:flex;align-items:center;gap:14px}.logo{width:54px;height:54px;border-radius:15px;background:var(--blue);color:#00111b;display:grid;place-items:center;font-size:28px;font-weight:900;box-shadow:0 0 24px #00bfff55;position:relative;overflow:hidden}.logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--blue)}
+h1{font-size:23px;letter-spacing:2px;margin:0}.kicker{color:var(--blue);font-weight:800;letter-spacing:1.4px;font-size:13px}hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+h2{margin:0 0 8px;font-size:27px}p{color:var(--muted);margin:7px 0}.pill{display:inline-block;border:1px solid #087eaa;color:#7ce0ff;border-radius:99px;padding:5px 10px;margin:12px 5px 0 0;font-size:12px}
+.form{padding:28px}.section{color:var(--blue);font-size:13px;font-weight:800;letter-spacing:1.5px;margin:6px 0 22px}
+label{display:block;font-weight:650;margin:18px 0 7px}input,select,textarea{width:100%;background:#07111d;border:1px solid #28465e;border-radius:10px;padding:13px;color:#edf7ff;font:inherit;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #00bfff22}textarea{min-height:105px;resize:vertical}
+.note{background:#071c2b;border:1px solid #104263;border-radius:12px;padding:14px;margin-top:22px;color:#c7e8f6;font-size:14px}.submit{width:100%;margin-top:20px;border:0;border-radius:11px;padding:15px;background:linear-gradient(90deg,#007fb5,#00bfff);color:#00111b;font-weight:900;letter-spacing:1px;cursor:pointer}.submit:disabled{opacity:.55;cursor:wait}
+.status{display:none;margin-top:16px;padding:14px;border-radius:10px}.status.ok{display:block;background:#08261f;border:1px solid #1b8a68;color:#b7ffe7}.status.err{display:block;background:#301316;border:1px solid #9d3d46;color:#ffd5d8}
+.footer{text-align:center;font-size:12px;color:#7892a8;margin:18px}.small{font-size:12px;color:#7892a8}
+@media(max-width:520px){.wrap{margin:18px auto}.hero,.form{padding:21px}.brand{align-items:flex-start}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="hero"><div class="brand"><div class="logo"><img src="/logo.png" alt="VanillaSMP logosu" onerror="this.remove()">V</div><div><h1>VANILLASMP</h1><div class="kicker">YETKİLİ BAŞVURU MERKEZİ</div></div></div><hr><h2>Ekibimize katıl!</h2><p>VanillaSMP yönetim ekibine katılmak için aşağıdaki formu eksiksiz doldur. Başvurular yönetim ekibi tarafından incelenir.</p><span class="pill">Güvenilirlik</span><span class="pill">Sorumluluk</span><span class="pill">Takım çalışması</span></header>
+<form class="form" id="applicationForm">
+<div class="section">01 — OYUNCU BİLGİLERİ</div>
+<label for="minecraft">Minecraft kullanıcı adın *</label><input id="minecraft" name="minecraft" required maxlength="40" autocomplete="off" placeholder="Minecraft adın">
+<label for="discord">Discord kullanıcı adın *</label><input id="discord" name="discord" required maxlength="80" autocomplete="off" placeholder="Discord kullanıcı adın">
+<label for="age">Yaş aralığın *</label><select id="age" name="age" required><option value="">Seç...</option><option>13–15</option><option>16–17</option><option>18+</option></select>
+<hr><div class="section">02 — YETKİLİ BAŞVURUSU</div>
+<label for="role">Hangi role başvuruyorsun? *</label><select id="role" name="role" required><option value="">Rol seç...</option><option>Rehber</option><option>Moderatör</option><option>Admin</option><option>Manager</option><option>Developer</option><option>Destek Ekibi</option></select>
+<label for="active">Günlük ne kadar aktif olabilirsin? *</label><select id="active" name="active" required><option value="">Süre seç...</option><option>1–2 saat</option><option>3–4 saat</option><option>5 saat ve üzeri</option></select>
+<label for="experience">Daha önce yetkililik yaptın mı? *</label><textarea id="experience" name="experience" required maxlength="2500" placeholder="Deneyimini anlat..."></textarea>
+<label for="why">Neden VanillaSMP yetkilisi olmak istiyorsun? *</label><textarea id="why" name="why" required maxlength="2500" placeholder="Cevabını yaz..."></textarea>
+<label for="rule">Bir oyuncu kural ihlali yaparsa nasıl davranırsın? *</label><textarea id="rule" name="rule" required maxlength="2500" placeholder="Nasıl müdahale edeceğini açıkla..."></textarea>
+<label for="team">Yetkili ekibinden biri hata yaparsa ne yaparsın? *</label><textarea id="team" name="team" required maxlength="2500" placeholder="Cevabını yaz..."></textarea>
+<label for="rules">Sunucu kurallarını kabul ediyor musun? *</label><select id="rules" name="rules" required><option value="">Seç...</option><option>Evet, kabul ediyorum.</option><option>Hayır, kabul etmiyorum.</option></select>
+<div class="note"><strong style="color:var(--blue)">Gizlilik bilgilendirmesi</strong><br>Başvurun yönetim ekibi tarafından değerlendirilmek üzere gönderilir. Lütfen parola veya başka hassas bilgileri forma yazma.</div>
+<button class="submit" id="submitBtn" type="submit">BAŞVURUYU GÖNDER</button>
+<div id="status" class="status" role="status" aria-live="polite"></div>
+<p class="small">Form gönderimi, yönetici tarafından yapılandırılan güvenli sunucu bağlantısı gerektirir.</p>
+</form><div class="footer">VANILLASMP • PREMIUM NEON BLUE</div></main>
+<script>
+/*
+  ÖNEMLİ: Formun gerçekten kayıt yapması için bu dosyayı tek başına yayımlamak yetmez.
+  Güvenli bir backend endpoint'i aşağıdaki sabite girilmelidir. Discord webhook URL'sini
+  asla buraya koymayın; tarayıcıda herkese görünür olur.
+*/
+const SUBMIT_ENDPOINT = ""; // Güvenli backend URL'si buraya eklenir.
+const form = document.getElementById('applicationForm');
+const statusBox = document.getElementById('status');
+const submitBtn = document.getElementById('submitBtn');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (!form.reportValidity()) return;
+  if (!SUBMIT_ENDPOINT) {
+    statusBox.className = 'status err';
+    statusBox.textContent = 'Form tasarımı hazır, ancak kayıt sistemi henüz bağlanmadı. Yönetici Google Sheets ve Discord bağlantısını kurduktan sonra gönderim etkinleşecek.';
+    return;
+  }
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'GÖNDERİLİYOR...';
+  statusBox.className = 'status';
+  const data = Object.fromEntries(new FormData(form).entries());
+  try {
+    const response = await fetch(SUBMIT_ENDPOINT, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+    });
+    if (!response.ok) throw new Error('Gönderim başarısız');
+    form.reset();
+    statusBox.className = 'status ok';
+    statusBox.textContent = 'Başvurun alındı! VanillaSMP yönetimi başvurunu inceleyecektir.';
+  } catch (error) {
+    statusBox.className = 'status err';
+    statusBox.textContent = 'Başvuru gönderilemedi. Lütfen daha sonra tekrar dene.';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'BAŞVURUYU GÖNDER';
+  }
+});
+</script></body></html>
